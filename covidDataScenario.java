@@ -23,24 +23,20 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 
-public class ScenariosDay1 {
+public class covidDataScenario {
 	
-//	    EndPoint : https://covid-19.dataflowkit.com/v1
-//
-//		Authorization -> No Auth
-//
-//		1. Find the top 3 Country with Highest New Cases 
-//		2. Find the top 3 Country with lowest New Deaths Cases
-//		3. Find the Status of your Country
-//		4. Verify the response HTTP status code = 200
-//		5. Verify the Response Time < 600 ms
-//		6. verify the Content Type = json
+//	    Endpoint : https://developer.bestbuy.com/
+//		Automation Steps:
+//		1.Find the store name, address and distance near to postal code 02864 for product 
+//		2. Find all the canon products of price range between $1000-$1500
+//		3. Get the regular and selling price for iPhone11 Pro
+//		4. Find the stores having store pick-up availability of iPhone 11 Pro in stores in RI region 
 	
 	
 	@Test
 	public void covidData()
 	{
-		int loopCount = 0;
+		RestAssured.baseURI="https://developer.bestbuy.com/";
 		
 		Response res = RestAssured.given().log().all()
 		.contentType(ContentType.JSON)
@@ -150,12 +146,7 @@ public class ScenariosDay1 {
 			
 		}
 	
-	@Test
-	public void createPaypalProduct()
-	{
-		
-		
-	}
+
 }
 	
 	
